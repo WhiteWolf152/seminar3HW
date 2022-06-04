@@ -1,61 +1,70 @@
-﻿/*Задача 19:
- Напишите программу, которая принимает на вход пятизначное число и проверяет, 
- является ли оно палиндромом.
+﻿/*
+ Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 14212 -> нет
 23432 -> да
 12821 -> да
 */
-
-
-// Цикл проверки введённой переменной 
-
-string numberUser()
+int GetNumber(string msg)
 {
-    bool readNumUser = true;
-    string numbS = "";
-
-    while (readNumUser)
+    while(true)
     {
-        Console.Write("Введите число в диапазоне 9999 < 100000 : ");
-        numbS = Console.ReadLine();
+        Console.WriteLine(msg);
+        string valueFromConsole = Console.ReadLine();
 
-        if (int.TryParse(numbS, out int numbI) )
+        if (int.TryParse(valueFromConsole, out int number))
         {
-            if (numbS.Length != 5 || numbS[0] == '-') Console.WriteLine("Введёно не верное число ");
-            else readNumUser = false;
-        }  
+            if ((number / 10000) > 0 && (number / 10000 <10))
+            {
+                return number; 
+            }
+            else
+            {
+                Console.WriteLine("Вы ввели не пятизначное число.");
+            }   
+        }
+        else
+        {
+             Console.WriteLine("Вы ввели не число. Нужно ввести число.");
+        }
     }
-    return numbS;
 }
 
-// Функция Формирования результата 
+int number = GetNumber("Введите пятизначное число");
 
-string polindromResult(int sum, string number)
+
+bool GetPolindro(int number)
 {
-    string result = (sum == 2 )? ($"Ваше число {number} - это полиндром ") : ($"Ваше число {number} - это не полиндром");
-return result;
+    string numberst = Convert.ToString(number);
+    int length = numberst.Length;
+    int targetCount = length / 2;
+    bool isPolindrom = false;
+    for (int i = 0; i <= targetCount;)
+     {
+        if (numberst[i] == numberst[length-1])
+        {
+            i++;
+            length--;
+            isPolindrom = true;
+        }
+        else
+        {
+            isPolindrom = false;
+            break;
+
+        }   
+         
+     }
+     return isPolindrom;
 }
 
-
-// Функцмя проверки на полимер и вывод результата 
-
-string polindromTest(string number)
+bool isPolindrom = GetPolindro(number);
+if (isPolindrom)
 {
-    int sum =0;
-    string result = "";
-    for (int i = 0; i < 2; i++)
-    {
-        if (number[i] == number[number.Length-i-1]) sum++;
-    }
-    result = polindromResult(sum,number);
-
-return result;
+    Console.WriteLine($"{number} -> Ваше число полиндром");
+}
+else
+{
+    Console.WriteLine($"{number} -> Ваше число не полиндром");
 }
 
-// Тело программы
 
-string number = numberUser();
-
-Console.WriteLine(polindromTest(number));
-
-Console.ReadLine(); 

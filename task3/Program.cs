@@ -12,46 +12,42 @@ view
 */
 
 
-// проверка ввода корректных данных
-
-int EnterNumberTest()
+int GetNumber()
 {
-    bool readlineFromStrToInt = true;
-    int number =0;
+    bool line = true;
+    int number = 0;
 
-    while (readlineFromStrToInt)
+    while (line)
     {
         Console.Write("Введите N : ");
         string numberSTR = Console.ReadLine();
 
-        if (int.TryParse(numberSTR, out int numberInt) )
+        if (int.TryParse(numberSTR, out int numberInt))
         {
             number = numberInt;
             if (number < 0) Console.WriteLine("Введите положительное число");
 
-            else if ( number == 0) Console.WriteLine("Введите пожалуйста не 0");
+            else if (number == 0) Console.WriteLine("Введите пожалуйста не 0");
 
             else
-                readlineFromStrToInt = false;
+                line = false;
         }
-        else Console.WriteLine("Вы ввели текст");  
+        else Console.WriteLine("Вы ввели текст");
     }
     return number;
 }
 
-// расчет результата
 
 void printResult(int n)
 {
-    for (int i=1 ; i <= n ; i ++) 
+    for (int i = 1; i <= n; i++)
     {
-        Console.Write($"{Math.Pow(i , 3)}");
-        if (i<n) Console.Write(", ");
+        Console.Write($"{Math.Pow(i, 3)}");
+        if (i < n) Console.Write(", ");
     }
 }
 
-// вывод результата
 
-printResult(EnterNumberTest());
+printResult(GetNumber());
 
-Console.ReadLine(); 
+Console.WriteLine();

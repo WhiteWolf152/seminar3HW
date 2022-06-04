@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/andreypletenkov/Рабочий стол/программирование/c#_seminar_3_HW/task2/task2.csproj": {}
+    "/home/andreypletenkov/Рабочий стол/программирование/c#seminar3HW/task2/task2.csproj": {}
   },
   "projects": {
-    "/home/andreypletenkov/Рабочий стол/программирование/c#_seminar_3_HW/task2/task2.csproj": {
+    "/home/andreypletenkov/Рабочий стол/программирование/c#seminar3HW/task2/task2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/andreypletenkov/Рабочий стол/программирование/c#_seminar_3_HW/task2/task2.csproj",
+        "projectUniqueName": "/home/andreypletenkov/Рабочий стол/программирование/c#seminar3HW/task2/task2.csproj",
         "projectName": "task2",
-        "projectPath": "/home/andreypletenkov/Рабочий стол/программирование/c#_seminar_3_HW/task2/task2.csproj",
+        "projectPath": "/home/andreypletenkov/Рабочий стол/программирование/c#seminar3HW/task2/task2.csproj",
         "packagesPath": "/home/andreypletenkov/.nuget/packages/",
-        "outputPath": "/home/andreypletenkov/Рабочий стол/программирование/c#_seminar_3_HW/task2/obj/",
+        "outputPath": "/home/andreypletenkov/Рабочий стол/программирование/c#seminar3HW/task2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/andreypletenkov/.nuget/NuGet/NuGet.Config"
