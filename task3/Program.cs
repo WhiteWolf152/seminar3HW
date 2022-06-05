@@ -27,7 +27,7 @@ int GetNumber()
             number = numberInt;
             if (number < 0) Console.WriteLine("Введите положительное число");
 
-            else if (number == 0) Console.WriteLine("Введите пожалуйста не 0");
+            else if (number == 0) Console.WriteLine("Введите не 0");
 
             else
                 line = false;
@@ -43,6 +43,7 @@ void printResult(int n)
     for (int i = 1; i <= n; i++)
     {
         Console.Write($"{Math.Pow(i, 3)}");
+        
         if (i < n) Console.Write(", ");
     }
 }

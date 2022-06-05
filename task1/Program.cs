@@ -1,5 +1,6 @@
 ﻿/*
- Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+ Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет,
+ является ли оно палиндромом.
 14212 -> нет
 23432 -> да
 12821 -> да
@@ -32,7 +33,7 @@ int GetNumber(string msg)
 int number = GetNumber("Введите пятизначное число");
 
 
-bool GetPolindro(int number)
+bool GetPolindrom(int number)
 {
     string numberst = Convert.ToString(number);
     int length = numberst.Length;
@@ -57,7 +58,7 @@ bool GetPolindro(int number)
      return isPolindrom;
 }
 
-bool isPolindrom = GetPolindro(number);
+bool isPolindrom = GetPolindrom(number);
 if (isPolindrom)
 {
     Console.WriteLine($"{number} -> Ваше число полиндром");
